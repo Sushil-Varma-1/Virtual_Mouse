@@ -3,7 +3,7 @@ import mediapipe as mp
 import time
 import math
 import numpy as np
-
+import autopy
 
 class handDetector():
     def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5):
@@ -85,18 +85,10 @@ class handDetector():
 
         return length, img, [x1, y1, x2, y2, cx, cy]
 
-    
-    
 
-import autopy
-
-
-
-######################
 wCam, hCam = 640, 480
 frameR = 100     #Frame Reduction
-smoothening = 7  #random value
-######################
+smoothening = 7  
 
 pTime = 0
 plocX, plocY = 0, 0
